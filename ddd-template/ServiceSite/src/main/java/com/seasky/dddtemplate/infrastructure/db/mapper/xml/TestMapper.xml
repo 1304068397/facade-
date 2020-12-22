@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.seasky.dddtemplate.infrastructure.db.mapper.table.TestMapper">
+
+
+    <select id="selectIdPage" resultType="java.lang.Long">
+        select id from tb_user
+        <where>
+            available = 'YES'
+            <if test="cm.name != null and cm.name != ''">
+                and name = #{cm.name}
+            </if>
+            <if test="cm.code != null and cm.code != ''">
+                and code = #{cm.code}
+            </if>
+            <if test="cm.age != null ">
+                and age = #{cm.age}
+            </if>
+            <if test="cm.sex != null and cm.sex != ''">
+                and sex = #{cm.sex}
+            </if>
+        </where>
+    </select>
+
+
+
+    <select id="selectUserList" resultType="com.seasky.dddtemplate.infrastructure.dataobject.po.TestPo">
+        select * from tb_user
+        <where>
+            available = 'YES'
+            <if test="pm.name != null and pm.name != ''">
+                and name = #{pm.name}
+            </if>
+            <if test="pm.code != null and pm.code != ''">
+                and code = #{pm.code}
+            </if>
+            <if test="pm.age != null ">
+                and age = #{pm.age}
+            </if>
+            <if test="pm.sex != null and pm.sex != ''">
+                and sex = #{pm.sex}
+            </if>
+
+        </where>
+    </select>
+</mapper>

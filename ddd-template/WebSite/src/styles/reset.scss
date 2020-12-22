@@ -1,0 +1,67 @@
+.mtNone {
+  .el-card__body {
+    padding-top: 0;
+  }
+}
+.tright {
+  text-align: right;
+}
+.filter-tree {
+  .custom-tree-node {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    padding-right: 8px;
+  }
+}
+.mt20 {
+  margin-top: 20px;
+}
+.btop {
+  border-top: 3px solid #3c8dbc;
+}
+.pd10 {
+  .el-card__body {
+    padding: 10px;
+  }
+}
+.pnone {
+  .el-card__body {
+    padding-top: 0;
+  }
+  .el-collapse-item__wrap {
+    border: none;
+  }
+}
+
+.overAuto {
+  overflow: inherit;
+}
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+/*外层轨道。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果*/
+::-webkit-scrollbar-track {
+  width: 6px;
+  background-color: #fff;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+/*滚动条的设置*/
+::-webkit-scrollbar-thumb {
+  background-color: #409eff;
+  background-clip: padding-box;
+  min-height: 28px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  border-radius: 2em;
+}
+/*滚动条移上去的背景*/
+::-webkit-scrollbar-thumb:hover {
+  background-color: #409eff;
+}
